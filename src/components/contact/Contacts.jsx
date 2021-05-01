@@ -8,11 +8,6 @@ const Components = (props) => {
         <table className="table shadow">
             <thead>
                 <tr>
-                    <td>
-                        <div className="form-group form-check">
-                            <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-                        </div>
-                    </td>
                     <th>Name</th>
                     <th>Email</th>
                     <th>Phone Number</th>
@@ -21,7 +16,7 @@ const Components = (props) => {
             </thead>
             <tbody>
             {contacts.map((contact)=>(
-              <Contact removeContact={removeContactHandle} contact={contact} /> 
+              <Contact key={contact.id} removeContact={removeContactHandle} contact={contact} /> 
             ))}
             </tbody>
         </table>
